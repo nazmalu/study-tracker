@@ -1,0 +1,23 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    background: #f8f8f8;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  input {
+    margin: 5px;
+    padding: 8px;
+  }
+  
+  button {
+    padding: 8px 12px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }

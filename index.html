@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>勉強記録アプリ</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>勉強記録アプリ</h1>
+
+  <form id="study-form">
+    <input type="date" id="date" required>
+    <input type="text" id="content" placeholder="何を勉強した？" required>
+    <input type="number" id="time" placeholder="時間（分）" required>
+
+    <!-- カテゴリ選択 -->
+    <select id="category" required>
+      <option value="" disabled selected>カテゴリを選択</option>
+      <option value="HTML">HTML</option>
+      <option value="CSS">CSS</option>
+      <option value="JavaScript">JavaScript</option>
+      <option value="AWS">AWS</option>
+      <option value="資格勉強">資格勉強</option>
+      <option value="その他">その他</option>
+    </select>
+
+    <button type="submit">記録する</button>
+  </form>
+
+  <!-- 初期化ボタン -->
+  <button id="reset-button" style="margin-top: 10px; background-color: #ffdddd; border: 1px solid red;">
+    全ての記録を初期化（削除）
+  </button>
+
+  <input type="text" id="search-input" placeholder="キーワードで検索" style="margin-bottom: 10px; padding: 8px;">
+
+  <h2>記録一覧</h2>
+  <ul id="record-list"></ul>
+
+  <h2>勉強時間グラフ</h2>
+  <canvas id="study-chart" width="400" height="200"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
